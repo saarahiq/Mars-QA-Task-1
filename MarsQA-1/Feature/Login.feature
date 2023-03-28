@@ -1,7 +1,8 @@
-﻿Feature: Login
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿Feature: ProfileFeature
+	
+	As a Mars website seller,
+	I would like to 
+
 
 @mytag
 Scenario: Login to website

@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\Login.cs" />
+    <Compile Include="LanguageFeatureStepDefinitions.cs" />
     <Compile Include="SpecflowPages\Helpers\CommonMethods.cs" />
     <Compile Include="SpecflowPages\Helpers\ConstantHelpers.cs" />
     <Compile Include="SpecflowPages\Helpers\Driver.cs" />
@@ -161,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Feature\Languages.feature" />
     <None Include="Feature\Login.feature" />
     <None Include="SpecflowTests\Data\Data.xlsx" />
     <None Include="packages.config" />

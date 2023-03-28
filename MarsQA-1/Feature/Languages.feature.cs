@@ -20,22 +20,23 @@ namespace MarsQA_1.Feature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ProfileFeature")]
-    public partial class ProfileFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("LanguageFeature")]
+    public partial class LanguageFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "Login.feature"
+#line 1 "Languages.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ProfileFeature", "\tAs a Mars website seller,\r\n\tI would like to ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "LanguageFeature", "As a Mars website user\r\nI would like to add, update and delete language on my pro" +
+                    "file details page\r\nso that I can manage my languages on my profile successfully", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,14 +75,20 @@ namespace MarsQA_1.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login to website")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void LoginToWebsite()
+        [NUnit.Framework.DescriptionAttribute("Add new Language to Profile")]
+        [NUnit.Framework.CategoryAttribute("tag1")]
+        [NUnit.Framework.TestCaseAttribute("English", "Fluent", "English has been added to your languages", null)]
+        [NUnit.Framework.TestCaseAttribute("French", "Basic", "French has been added to your languages", null)]
+        public virtual void AddNewLanguageToProfile(string language, string level, string notification, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
-                    "mytag"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to website", null, new string[] {
-                        "mytag"});
+            string[] @__tags = new string[] {
+                    "tag1"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add new Language to Profile", null, @__tags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -103,7 +110,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
- testRunner.Given("I login to the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I click on Add New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 10
+ testRunner.When(string.Format("I enter \'{0}\' and \'{1}\'", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 11
+ testRunner.And("I click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
+ testRunner.Then(string.Format("I should see \'{0}\'", notification), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
